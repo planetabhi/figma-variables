@@ -1,9 +1,9 @@
-# Variables Structuring, Figma
+# Variables Strategy, Figma
 Variables in Figma Design store reusable values that can be applied to all kinds of design properties and prototyping actions. They help save time and effort when building designs, managing design systems, and creating complex prototyping flows.
 
 
-### Collections
-A collection is a set of variables and modes. Collections can be used to organize related variables together. For example, use one collection to localize text in different languages, and another collection for spatial values.
+### Structuring Collections
+A collection is a set of variables. Collections can be used to organize related variables together.
 
 ```
 ┌───────────────────┐                                                                  
@@ -116,11 +116,11 @@ Design tokens represent an abstraction in which a referenced value is used.
           ├─▶│Global Patterns │───┬─▶│     Header     │
           │  └────────────────┘   │  └────────────────┘
           │  ┌────────────────┐   │  ┌────────────────┐
-          └─▶│  Abstractions  │   ├─▶│    Sidebar     │
+          ├─▶│  Abstractions  │   ├─▶│    Sidebar     │
+          │  └────────────────┘   │  └────────────────┘
+          │  ┌────────────────┐   │  ┌────────────────┐
+          └─▶│    More...     │   ├─▶│     Footer     │
              └────────────────┘   │  └────────────────┘
-                                  │  ┌────────────────┐
-                                  ├─▶│     Footer     │
-                                  │  └────────────────┘
                                   │  ┌────────────────┐
                                   └─▶│    More...     │
                                      └────────────────┘
