@@ -1,0 +1,11 @@
+{
+  "name": "figma-variables",
+  "version": "0.1.0",
+  "description": "Variables in Figma Design store reusable values that can be applied to all kinds of design properties and prototyping actions. They help save time and effort when building designs, managing design systems, and creating complex prototyping flows.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "@planetabhi",
+  "license": "MIT"
+}
