@@ -1,4 +1,4 @@
-# Figma Variables Strategy
+# Variables Structuring, Figma
 Variables in Figma Design store reusable values that can be applied to all kinds of design properties and prototyping actions. They help save time and effort when building designs, managing design systems, and creating complex prototyping flows.
 
 
