@@ -22,9 +22,54 @@ A collection is a set of variables and modes. Collections can be used to organiz
 
 
 #### Design Tokens
+```
+┌───────────────────┐                                          
+│   Design Tokens   │                                          
+│    (Published)    │                                          
+└───────────────────┘                                          
+          │                                                    
+          │  ┌────────────┐                      ┌────────────┐
+          ├─▶│   Border   │───────────────────┬─▶│   Width    │
+          │  └────────────┘                   │  └────────────┘
+          │                                   │  ┌────────────┐
+          │                                   └─▶│   Radius   │
+          │                                      └────────────┘
+          │  ┌────────────┐                      ┌────────────┐
+          ├─▶│   Colors   │───────────────────┬─▶│ Background │
+          │  └────────────┘                   │  └────────────┘
+          │  ┌────────────┐                   │  ┌────────────┐
+          ├─▶│   Shadow   │                   ├─▶│    Base    │
+          │  └────────────┘                   │  └────────────┘
+          │  ┌────────────┐                   │  ┌────────────┐
+          ├─▶│   Sizing   │                   ├─▶│   Border   │
+          │  └────────────┘                   │  └────────────┘
+          │  ┌────────────┐                   │  ┌────────────┐
+          ├─▶│  Spacing   │                   ├─▶│  Content   │
+          │  └────────────┘                   │  └────────────┘
+          │  ┌────────────┐    ┌────────────┐ │  ┌────────────┐
+          ├─▶│ Typography │─┬─▶│Font family │ ├─▶│ Highlight  │
+          │  └────────────┘ │  └────────────┘ │  └────────────┘
+          │                 │  ┌────────────┐ │  ┌────────────┐
+          │                 ├─▶│ Font size  │ └─▶│Illustration│
+          │                 │  └────────────┘    └────────────┘
+          │                 │  ┌────────────┐                  
+          │                 ├─▶│Font weight │                  
+          │                 │  └────────────┘                  
+          │                 │  ┌────────────┐                  
+          │                 └─▶│Line height │                  
+          │                    └────────────┘                  
+          │  ┌────────────┐                                    
+          └─▶│   Alias    │                                    
+             └────────────┘                                    
+```
+
+
 #### Global Primitives
+
 #### Language
+
 #### Private Primitives
+Private primitives store agnostic values used by global primitives and design token variable collections in Figma. Example: 0, 1, 2, 4, 8, 12... and 100, 200, 300...
 
 ---
 
