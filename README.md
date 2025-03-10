@@ -1,6 +1,6 @@
 # Structuring Variables in Figma
 
-## About
+## About Variables
 Variables in Figma store reusable values that can be applied to all kinds of design properties and prototyping actions. They help save time and effort when building designs, managing design systems, and creating complex prototyping flows.
 
 ### Types of Variables
@@ -12,11 +12,9 @@ Variable type | Defined by | &nbsp;
 `Boolean` | True, false values | Boolean variables use true/false. Use them to show/hide layers.
 
 ### Collections and Groups
-Both collections and groups are used to organize variables and improve their discoverability.
-
-A collection is a set of variables and modes. Collections facilitate the organization of related variables. For example, you might use one collection to localize text across different languages, and another collection for spatial values.
-
-You can further organize variables by placing them into groups within a collection. For instance, use one group for text colors, and another for stroke colors.
+- Both collections and groups are used to organize variables and improve their discoverability.
+- A collection is a set of variables and modes. Collections facilitate the organization of related variables.
+- You can further organize variables by placing them into groups within a collection.
 
 ### Differences b/w Variables and Styles
 - Variables define reusable values like colors and spacing, while styles are predefined sets of design properties, such as text and effects.
