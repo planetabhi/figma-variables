@@ -1,7 +1,7 @@
 {
   "name": "figma-variables",
   "version": "0.1.0",
-  "description": "A codebase-aligned approach to structuring figma variables by purpose.",
+  "description": "A codebase-aligned approach to structuring Figma variables by purpose.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/planetabhi/figma-variables.git"
