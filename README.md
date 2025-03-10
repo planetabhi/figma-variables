@@ -8,12 +8,12 @@ Variables in Figma store reusable values that can be applied to all kinds of des
 - Variables store raw, single values, while styles store sets of values.
 
 ### Types of Variables
-Variable type | Defined by
-:--- |:---
-`Color` | Solid fills
-`Number` | Number values
-`String` | Text strings
-`Boolean` | True, false values
+Variable type | Defined by | &nbsp;
+:--- |:--- |:---
+`Color` | Solid fills | Color variables are solid values like #000000. Use them for theming (Dark/Light modes) and organizing your palette.
+`Number` | Number values | Number variables hold values like 24 or 12.75. Use them for responsive design, language variations, and reusable text styles.
+`String` | Text strings | String variables use text (like 'Hello') for language swaps, text styles, and prototype variants.
+`Boolean` | True, false values | Boolean variables use true/false. Use them to show/hide layers.
 
 ### Collections and Groups
 Both collections and groups are used to organize variables and improve their discoverability.
@@ -26,6 +26,7 @@ You can further organize variables by placing them into groups within a collecti
 
 
 ### Structuring Collections
+We will organize our Figma variables using four main collections:
 
 ```
 ┌───────────────────┐                                                                  
