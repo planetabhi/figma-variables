@@ -1,11 +1,7 @@
 {
   "name": "figma-variables",
   "version": "0.1.0",
-  "description": "Structuring variables in Figma.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "description": "A codebase-aligned approach to structuring figma variables by purpose.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/planetabhi/figma-variables.git"
@@ -13,6 +9,7 @@
   "bugs": {
     "url": "https://github.com/planetabhi/figma-variables/issues"
   },
+  "author": "@planetabhi",
   "keywords": [
     "figma",
     "variables",
