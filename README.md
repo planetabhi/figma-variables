@@ -49,7 +49,7 @@ We will organize our Figma variables using four main collections:
 Now, let’s deep dive into how groups within each collection drive precision and flexibility.
 
 #### 01. Design Tokens Collection
-Define colors, spacing, shadows, and sizing for components. Groups enforce consistent styling. In sync with codebase's theme definitions to ensure consistency.
+Define colors, spacing, shadows, and sizing for components. Groups enforce consistent styling.
 
 > Visibility: `Published`
 
@@ -84,9 +84,26 @@ Define colors, spacing, shadows, and sizing for components. Groups enforce consi
                                 └────────────┘
 ```
 
+In sync with codebase's theme definitions. In the codebase, `design-tokens.js` might look something like this (rough example):
+
+```js
+export const designTokens = {
+  'border': {
+    'width': { 'default': '' },
+    'radius': { 'small': '' }
+  },
+  'colors': {
+    'background': { 'primary': '' },
+    'base': { 'primary': '' }
+  },
+  'shadow': { 'default': '' },
+  'sizing': { 'xs': '' },
+  'spacing': { 'xs': '' }
+};
+```
 
 #### 02. Global Primitives Collection
-Store base values: colors (grey-90, red-50), font sizes, and weights. Organize them into themes (Default, High Contrast) for quick swaps. In sync with codebase's theme definitions to ensure consistency.
+Store base values: colors (grey-90, red-50), font sizes, and weights. Organize them into themes (Default, High Contrast) for quick swaps.
 
 > Visibility: `Published`
 
@@ -134,6 +151,24 @@ Store base values: colors (grey-90, red-50), font sizes, and weights. Organize t
                                                     │  ┌────────────┐                  
                                                     └─▶│   Brown    │                  
                                                        └────────────┘                  
+```
+
+In sync with codebase's theme definitions. Here's a simplified example of what `global.js` could look like in practice:
+
+```js
+export const globalPrimitives = {
+  'colors': {
+    'defaultTheme': {
+      'grey': { 'grey-90': '', 'grey-00': '' }
+    }
+  },
+  'typography': {
+    'fontFamily': { 'default': "system-ui, sans-serif;" },
+    'fontSize': { 'm': '1rem' },
+    'fontWeight': { 'regular': 400 },
+    'lineHeight': { 'm': '1.5' }
+  }
+};
 ```
 
 #### 03. Language Collection
@@ -191,7 +226,7 @@ Private primitives contain agnostic values (numbers, scales, black/white) used b
 ```
 
 ### Visualizing the Overall Variables
-Below is a tree string that visualizes the overall structure of the variables:
+Below is a tree string that visualizes the overall structure of the variables in Figma:
 
 ```
 .
