@@ -1,5 +1,20 @@
 # Structuring Variables in Figma
+
+### About Variables
 Variables in Figma store reusable values that can be applied to all kinds of design properties and prototyping actions. They help save time and effort when building designs, managing design systems, and creating complex prototyping flows.
+
+### Types of Variables
+Variable type | Defined by | &nbsp;
+:--- |:--- |:---
+`Color` | Solid fills | Color variables are solid values like #000000. Use them for theming (Dark/Light modes) and organizing your palette.
+`Number` | Number values | Number variables hold values like 24 or 12.75. Use them for responsive design, language variations, and reusable text styles.
+`String` | Text strings | String variables use text (like 'Hello') for language swaps, text styles, and prototype variants.
+`Boolean` | True, false values | Boolean variables use true/false. Use them to show/hide layers.
+
+### Collections and Groups
+- Both collections and groups are used to organize variables and improve their discoverability.
+- A collection is a set of variables and modes. Collections facilitate the organization of related variables.
+- You can further organize variables by placing them into groups within a collection.
 
 ### Differences b/w Variables and Styles
 - Variables define reusable values like colors and spacing, while styles are predefined sets of design properties, such as text and effects.
@@ -7,25 +22,17 @@ Variables in Figma store reusable values that can be applied to all kinds of des
 - Variables provide design flexibility, allowing instance-specific value changes like button text or color. Styles maintain design consistency for elements like button styles, headings, or color palettes.
 - Variables store raw, single values, while styles store sets of values.
 
-### Types of Variables
-Variable type | Defined by
-:--- |:---
-`Color` | Solid fills
-`Number` | Number values
-`String` | Text strings
-`Boolean` | True, false values
-
-### Collections and Groups
-Both collections and groups are used to organize variables and improve their discoverability.
-
-A collection is a set of variables and modes. Collections facilitate the organization of related variables. For example, you might use one collection to localize text across different languages, and another collection for spatial values.
-
-You can further organize variables by placing them into groups within a collection. For instance, use one group for text colors, and another for stroke colors.
-
 ---
 
+## Structuring Collections
+We will organize our Figma variables using four main collections:
 
-### Structuring Collections
+&nbsp; | Collection | Visibility
+:--- |:--- |:---
+01 | `Design Tokens` | Published
+02 | `Global Primitives` | Published
+03 | `Language` | Published
+04 | `Private Primitives` | Hidden
 
 ```
 ┌───────────────────┐                                                                  
@@ -40,11 +47,14 @@ You can further organize variables by placing them into groups within a collecti
 └───────────────────┘ └───────────────────┘ └───────────────────┘ └───────────────────┘                                        
 ```
 
-> Note: 'Design Tokens' and 'Global Primitives' are in sync with the codebase's theme definitions.
+> Note: 'Design Tokens' and 'Global Primitives' collections can be kept in sync with your codebase's theme definitions, which will be the single source of truth (SSOT).
 
 
-#### Design Tokens
-Design tokens represent an abstraction in which a referenced value is used.
+## Structuring Within Collections: Groups
+Now, let’s deep dive into how groups within each collection drive precision and flexibility.
+
+#### 01. Design Tokens Collection
+Define colors, spacing, shadows, and sizing for components. Groups enforce consistent styling. Sync these with codebase's theme definitions to ensure consistency.
 
 ```
 ┌───────────────────┐                         
@@ -79,7 +89,9 @@ Design tokens represent an abstraction in which a referenced value is used.
 ```
 
 
-#### Global Primitives
+#### 02. Global Primitives Collection
+Store base values: colors (grey-90, red-50), font sizes, and weights. Organize them into themes (Default, High Contrast) for quick swaps. Sync these with code to ensure consistency.
+
 ```
 ┌───────────────────┐                                                                  
 │ Global Primitives │                                                                  
@@ -127,7 +139,9 @@ Design tokens represent an abstraction in which a referenced value is used.
                                                        └────────────┘                  
 ```
 
-#### Language
+#### 03. Language Collection
+Holds text strings for gloabl areas, components, patterns, and abstractions. Centralizes translations for editing.
+
 ```
 ┌───────────────────┐                                  
 │     Language      │                                  
@@ -148,8 +162,8 @@ Design tokens represent an abstraction in which a referenced value is used.
                                      └────────────────┘
 ```
 
-#### Private Primitives
-Private primitives store agnostic values used by global primitives and design token variable collections in Figma. Example: 0, 1, 2, 4, 8, 12... and 100, 200, 300...
+#### 04. Private Primitives Collection
+Private primitives contain agnostic values (numbers, scales, black/white) used by global primitives and design token variable collections. These build spacing scales, and colors for other collections, keeping math consistent and reusable.
 
 ```
 ┌───────────────────┐          
@@ -176,6 +190,3 @@ Private primitives store agnostic values used by global primitives and design to
           └─▶│ regular, bold  │
              └────────────────┘
 ```
-
----
-

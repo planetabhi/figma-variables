@@ -3,4 +3,4 @@ logs
 .pnpm-debug.log*
 node_modules/
 .cache/
-variables.monopic
+src/variables.monopic
