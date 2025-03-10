@@ -51,8 +51,8 @@ Now, let’s deep dive into how groups within each collection drive precision an
 #### 01. Design Tokens Collection
 Define colors, spacing, shadows, and sizing for components. Groups enforce consistent styling.
 
-- Visibility: `Published`
-- Status: `In sync` with theme definitions
+- Collection visibility (Figma): `Published`
+- Theme definition (Code): `In sync`
 
 ```
 ┌───────────────────┐                         
@@ -106,8 +106,8 @@ export const designTokens = {
 #### 02. Global Primitives Collection
 Store base values: colors (grey-90, red-50), font sizes, and weights. Organize them into themes (Default, High Contrast) for quick swaps.
 
-- Visibility: `Published`
-- Status: `In sync` with theme definitions
+- Collection visibility (Figma): `Published`
+- Theme definition (Code): `In sync`
 
 ```
 ┌───────────────────┐                                                                  
@@ -176,8 +176,8 @@ export const globalPrimitives = {
 #### 03. Language Collection
 Holds text strings for gloabl areas, components, patterns, and abstractions. Centralizes translations for design usage.
 
-- Visibility: `Published`
-- Status: `Async`
+- Collection visibility (Figma): `Published`
+- Theme definition (Code): `Optional`
 
 ```
 ┌───────────────────┐                                  
@@ -201,8 +201,8 @@ Holds text strings for gloabl areas, components, patterns, and abstractions. Cen
 #### 04. Private Primitives Collection
 Private primitives contain agnostic values (numbers, scales, black/white) used by global primitives and design token variable collections. These build spacing scales, and colors for other collections, keeping math consistent and reusable.
 
-- Visibility: `Hidden`
-- Status: `Async`
+- Collection visibility (Figma): `Hidden`
+- Theme definition (Code): `Not Applicable`
 
 ```
 ┌───────────────────┐          
