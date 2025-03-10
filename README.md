@@ -22,13 +22,6 @@ Type | Defined by | &nbsp;
 ## Structuring Collections
 We will organize our Figma variables using four main collections:
 
-&nbsp; | Collection Name | Collection Visibility | Codes Definition
-:--- |:--- |:--- |:---
-01 | **Design Tokens** | `Published` | `In sync`
-02 | **Global Primitives** | `Published` | `In sync`
-03 | **Language** | `Published` | `Optional`
-04 | **Private Primitives** | `Hidden` | `Not applicable`
-
 ```
 ┌───────────────────┐                                                                  
 │    Collections    │                                                                  
@@ -41,6 +34,13 @@ We will organize our Figma variables using four main collections:
 │    (Published)    │ │    (Published)    │ │    (Published)    │ │      (Hidden)     │
 └───────────────────┘ └───────────────────┘ └───────────────────┘ └───────────────────┘                                        
 ```
+
+&nbsp; | Collection Name | Collection Visibility | Codes Definition
+:--- |:--- |:--- |:---
+01 | **Design Tokens** | `Published` | `In sync`
+02 | **Global Primitives** | `Published` | `In sync`
+03 | **Language** | `Published` | `Optional`
+04 | **Private Primitives** | `Hidden` | `Not applicable`
 
 > Note: 'Design Tokens' and 'Global Primitives' collections can be kept in sync with your codebase's theme definitions, which will be the single source of truth (SSOT).
 
