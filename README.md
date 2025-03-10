@@ -5,12 +5,12 @@ Building a scalable UI library in Figma starts with organizing variables thought
 Variables in Figma store reusable values that can be applied to all kinds of design properties and prototyping actions. They help save time and effort when building designs, managing design systems, and creating complex prototyping flows.
 
 ### Types of Variables
-Variable type | Defined by | &nbsp;
+Variable type &nbsp; &nbsp; &nbsp; | Defined by &nbsp; &nbsp; &nbsp; | &nbsp;
 :--- |:--- |:---
 `Color` | Solid fills | Color variables are solid values like #000000. Use them for theming (Dark/Light modes) and organizing your palette.
 `Number` | Number values | Number variables hold values like 24 or 12.75. Use them for responsive design, language variations, and reusable text styles.
 `String` | Text strings | String variables use text (like 'Hello') for language swaps, text styles, and prototype variants.
-`Boolean` &nbsp; &nbsp; &nbsp; | True, false values &nbsp; &nbsp; &nbsp; | Boolean variables use true/false. Use them to show/hide layers.
+`Boolean` | True, false values | Boolean variables use true/false. Use them to show/hide layers.
 
 ### Collections and Groups
 - Both collections and groups are used to organize variables and improve their discoverability.
