@@ -89,16 +89,16 @@ In the codebase, `design-tokens.js` might look something like this (rough exampl
 ```js
 export const designTokens = {
   'border': {
-    'width': { 'default': '' },
-    'radius': { 'small': '' }
+    'width': { 'default': '0.063rem' },
+    'radius': { 'small': '0.25rem' }
   },
   'colors': {
-    'background': { 'primary': '' },
-    'base': { 'primary': '' }
+    'background': { 'primary': 'oklch(100% 0 0)' },
+    'base': { 'primary': 'oklch(59.23% 0.2221 261.8)' }
   },
-  'shadow': { 'default': '' },
-  'sizing': { 'xs': '' },
-  'spacing': { 'xs': '' }
+  'shadow': { 'default': '0px 0px 0px rgba(0, 0, 0, 0);' },
+  'sizing': { 'xs': '1rem' },
+  'spacing': { 'xs': '0.25rem' }
 };
 ```
 
