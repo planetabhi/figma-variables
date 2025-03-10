@@ -2,6 +2,7 @@
   "name": "figma-variables",
   "version": "0.1.0",
   "description": "A codebase-aligned approach to structuring Figma variables.",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/planetabhi/figma-variables.git"
@@ -16,5 +17,11 @@
     "structuring",
     "code",
     "connect"
-  ]
+  ],
+  "devDependencies": {
+    "cheerio": "^1.0.0",
+    "dotenv": "^16.4.7",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^6.0.1"
+  }
 }

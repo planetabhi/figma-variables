@@ -3,4 +3,7 @@ logs
 .pnpm-debug.log*
 node_modules/
 .cache/
+.env
+.env.test
 src/variables.monopic
+figma.config.js
