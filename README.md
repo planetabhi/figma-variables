@@ -1,5 +1,5 @@
 # Structuring Variables in Figma
-Building a scalable UI library in Figma starts with organizing variables thoughtfully. Without structure, managing colors, text, spacing, and themes becomes chaotic as projects grow. This repo walks through a clear, code-aligned approach to group variables by purpose — from foundational values to reusable design tokens and dynamic content. You'll learn how to reduce redundancy, streamline updates, and ensure consistency across components and platforms. Let's simplify the complexity.
+Building a scalable UI library in Figma starts with organizing variables thoughtfully. Without structure, managing colors, text, spacing, and themes becomes chaotic as projects grow. This guide walks through a clear, codebase-aligned approach to structure variables by purpose — from foundational values to reusable design tokens and dynamic content. You'll learn how to reduce redundancy, streamline updates, and ensure consistency across components and platforms. Let's simplify the complexity.
 
 ### About Variables
 Variables in Figma store reusable values that can be applied to all kinds of design properties and prototyping actions. They help save time and effort when building designs, managing design systems, and creating complex prototyping flows.
@@ -49,7 +49,7 @@ We will organize our Figma variables using four main collections:
 Now, let’s deep dive into how groups within each collection drive precision and flexibility.
 
 #### 01. Design Tokens Collection
-Define colors, spacing, shadows, and sizing for components. Groups enforce consistent styling. Sync these with codebase's theme definitions to ensure consistency.
+Define colors, spacing, shadows, and sizing for components. Groups enforce consistent styling. In sync with codebase's theme definitions to ensure consistency.
 
 > Visibility: `Published`
 
@@ -86,7 +86,7 @@ Define colors, spacing, shadows, and sizing for components. Groups enforce consi
 
 
 #### 02. Global Primitives Collection
-Store base values: colors (grey-90, red-50), font sizes, and weights. Organize them into themes (Default, High Contrast) for quick swaps. Sync these with code to ensure consistency.
+Store base values: colors (grey-90, red-50), font sizes, and weights. Organize them into themes (Default, High Contrast) for quick swaps. In sync with codebase's theme definitions to ensure consistency.
 
 > Visibility: `Published`
 
@@ -137,7 +137,7 @@ Store base values: colors (grey-90, red-50), font sizes, and weights. Organize t
 ```
 
 #### 03. Language Collection
-Holds text strings for gloabl areas, components, patterns, and abstractions. Centralizes translations for editing.
+Holds text strings for gloabl areas, components, patterns, and abstractions. Centralizes translations for design usage.
 
 > Visibility: `Published`
 
