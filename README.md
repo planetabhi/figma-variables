@@ -51,10 +51,11 @@ Now, let’s deep dive into how groups within each collection drive precision an
 #### 01. Design Tokens Collection
 Define colors, spacing, shadows, and sizing for components. Groups enforce consistent styling. Sync these with codebase's theme definitions to ensure consistency.
 
+> Visibility: `Published`
+
 ```
 ┌───────────────────┐                         
-│   Design Tokens   │                         
-│    (Published)    │                         
+│   Design Tokens   │                                            
 └───────────────────┘                         
           │                                   
           │  ┌────────────┐     ┌────────────┐
@@ -87,10 +88,11 @@ Define colors, spacing, shadows, and sizing for components. Groups enforce consi
 #### 02. Global Primitives Collection
 Store base values: colors (grey-90, red-50), font sizes, and weights. Organize them into themes (Default, High Contrast) for quick swaps. Sync these with code to ensure consistency.
 
+> Visibility: `Published`
+
 ```
 ┌───────────────────┐                                                                  
-│ Global Primitives │                                                                  
-│    (Published)    │                                                                  
+│ Global Primitives │                                                                 
 └───────────────────┘                                                                  
           │                                                                            
           │  ┌────────────┐     ┌────────────────┐     ┌────────────┐    ┌────────────┐
@@ -137,10 +139,11 @@ Store base values: colors (grey-90, red-50), font sizes, and weights. Organize t
 #### 03. Language Collection
 Holds text strings for gloabl areas, components, patterns, and abstractions. Centralizes translations for editing.
 
+> Visibility: `Published`
+
 ```
 ┌───────────────────┐                                  
-│     Language      │                                  
-│    (Published)    │                                  
+│     Language      │                                                                    
 └───────────────────┘                                  
           │                                            
           │  ┌────────────────┐      ┌────────────────┐
@@ -160,10 +163,11 @@ Holds text strings for gloabl areas, components, patterns, and abstractions. Cen
 #### 04. Private Primitives Collection
 Private primitives contain agnostic values (numbers, scales, black/white) used by global primitives and design token variable collections. These build spacing scales, and colors for other collections, keeping math consistent and reusable.
 
+> Visibility: `Hidden`
+
 ```
 ┌───────────────────┐          
-│Private Primitives │          
-│     (Hidden)      │          
+│Private Primitives │                   
 └───────────────────┘          
           │                    
           │  ┌────────────────┐
