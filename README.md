@@ -190,7 +190,7 @@ Private primitives contain agnostic values (numbers, scales, black/white) used b
              └────────────────┘
 ```
 
-### Visualizing the Overall Structure
+### Visualizing the Overall Variables
 Below is a tree string that visualizes the overall structure of the variables:
 
 ```
