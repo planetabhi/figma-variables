@@ -1,10 +1,11 @@
 # Structuring Variables in Figma
+Building a scalable UI library in Figma starts with organizing variables thoughtfully. Without structure, managing colors, text, spacing, and themes becomes chaotic as projects grow. This repo walks through a clear, code-aligned approach to group variables by purpose — from foundational values to reusable design tokens and dynamic content. You'll learn how to reduce redundancy, streamline updates, and ensure consistency across components and platforms. Let's simplify the complexity.
 
 ### About Variables
 Variables in Figma store reusable values that can be applied to all kinds of design properties and prototyping actions. They help save time and effort when building designs, managing design systems, and creating complex prototyping flows.
 
 ### Types of Variables
-Variable type | Defined by | &nbsp;
+Type | Defined by | &nbsp;
 :--- |:--- |:---
 `Color` | Solid fills | Color variables are solid values like #000000. Use them for theming (Dark/Light modes) and organizing your palette.
 `Number` | Number values | Number variables hold values like 24 or 12.75. Use them for responsive design, language variations, and reusable text styles.
@@ -15,12 +16,6 @@ Variable type | Defined by | &nbsp;
 - Both collections and groups are used to organize variables and improve their discoverability.
 - A collection is a set of variables and modes. Collections facilitate the organization of related variables.
 - You can further organize variables by placing them into groups within a collection.
-
-### Differences b/w Variables and Styles
-- Variables define reusable values like colors and spacing, while styles are predefined sets of design properties, such as text and effects.
-- Variables, unlike styles, enable dynamic design changes across contexts. For instance, switch between light and dark modes or adjust padding for different devices. This allows for adaptable component systems.
-- Variables provide design flexibility, allowing instance-specific value changes like button text or color. Styles maintain design consistency for elements like button styles, headings, or color palettes.
-- Variables store raw, single values, while styles store sets of values.
 
 ---
 
@@ -56,10 +51,11 @@ Now, let’s deep dive into how groups within each collection drive precision an
 #### 01. Design Tokens Collection
 Define colors, spacing, shadows, and sizing for components. Groups enforce consistent styling. Sync these with codebase's theme definitions to ensure consistency.
 
+> Visibility: `Published`
+
 ```
 ┌───────────────────┐                         
-│   Design Tokens   │                         
-│    (Published)    │                         
+│   Design Tokens   │                                            
 └───────────────────┘                         
           │                                   
           │  ┌────────────┐     ┌────────────┐
@@ -92,10 +88,11 @@ Define colors, spacing, shadows, and sizing for components. Groups enforce consi
 #### 02. Global Primitives Collection
 Store base values: colors (grey-90, red-50), font sizes, and weights. Organize them into themes (Default, High Contrast) for quick swaps. Sync these with code to ensure consistency.
 
+> Visibility: `Published`
+
 ```
 ┌───────────────────┐                                                                  
-│ Global Primitives │                                                                  
-│    (Published)    │                                                                  
+│ Global Primitives │                                                                 
 └───────────────────┘                                                                  
           │                                                                            
           │  ┌────────────┐     ┌────────────────┐     ┌────────────┐    ┌────────────┐
@@ -142,10 +139,11 @@ Store base values: colors (grey-90, red-50), font sizes, and weights. Organize t
 #### 03. Language Collection
 Holds text strings for gloabl areas, components, patterns, and abstractions. Centralizes translations for editing.
 
+> Visibility: `Published`
+
 ```
 ┌───────────────────┐                                  
-│     Language      │                                  
-│    (Published)    │                                  
+│     Language      │                                                                    
 └───────────────────┘                                  
           │                                            
           │  ┌────────────────┐      ┌────────────────┐
@@ -165,10 +163,11 @@ Holds text strings for gloabl areas, components, patterns, and abstractions. Cen
 #### 04. Private Primitives Collection
 Private primitives contain agnostic values (numbers, scales, black/white) used by global primitives and design token variable collections. These build spacing scales, and colors for other collections, keeping math consistent and reusable.
 
+> Visibility: `Hidden`
+
 ```
 ┌───────────────────┐          
-│Private Primitives │          
-│    (Examples)     │          
+│Private Primitives │                   
 └───────────────────┘          
           │                    
           │  ┌────────────────┐
@@ -190,3 +189,60 @@ Private primitives contain agnostic values (numbers, scales, black/white) used b
           └─▶│ regular, bold  │
              └────────────────┘
 ```
+
+### Visualizing the Overall Structure
+Below is a tree string that visualizes the overall structure of the variables:
+
+```
+.
+├── Design Tokens (Published)
+│   ├── Border
+│   │   ├── Width
+│   │   └── Radius
+│   ├── Colors
+│   │   ├── Background
+│   │   ├── Base
+│   │   ├── Border
+│   │   ├── Content
+│   │   ├── Highlight
+│   │   └── more...
+│   ├── Shadow
+│   ├── Sizing
+│   ├── Spacing
+│   └── more...
+├── Global Primitives (Published)
+│   ├── Colors
+│   │   ├── Default theme/
+│   │   ├── High contrast/
+│   │   └── more...
+│   └── Typography
+│       ├── Font family
+│       ├── Font size
+│       ├── Font weight
+│       └── Line height
+├── Language (Published)
+│   ├── Global Areas
+│   │   ├── Header
+│   │   ├── Sidebar
+│   │   ├── Footer
+│   │   └── more...
+│   ├── Abstractions
+│   ├── Patterns
+│   └── more...
+└── Private Primitives (Hidden)/ 
+```
+
+---
+
+## Misc
+
+### Differences b/w Variables and Styles
+- Variables define reusable values like colors and spacing, while styles are predefined sets of design properties, such as text and effects.
+- Variables, unlike styles, enable dynamic design changes across contexts. For instance, switch between light and dark modes or adjust padding for different devices. This allows for adaptable component systems.
+- Variables provide design flexibility, allowing instance-specific value changes like button text or color. Styles maintain design consistency for elements like button styles, headings, or color palettes.
+- Variables store raw, single values, while styles store sets of values.
+
+---
+
+## About
+Authored by [@planetabhi](https://planetabhi.com/). To provide feedback or suggest improvements, please [open a GitHub issue](https://github.com/planetabhi/figma-variables/issues).
