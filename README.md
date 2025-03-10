@@ -1,6 +1,6 @@
 # Structuring Variables in Figma
 
-## About Variables
+### About Variables
 Variables in Figma store reusable values that can be applied to all kinds of design properties and prototyping actions. They help save time and effort when building designs, managing design systems, and creating complex prototyping flows.
 
 ### Types of Variables
@@ -27,6 +27,13 @@ Variable type | Defined by | &nbsp;
 ## Structuring Collections
 We will organize our Figma variables using four main collections:
 
+Collection | Visibility | &nbsp;
+:--- |:--- |:---
+`Design Tokens` | Published
+`Global Primitives` | Published
+`Language` | Published
+`Private Primitives` | Hidden
+
 ```
 ┌───────────────────┐                                                                  
 │    Collections    │                                                                  
@@ -42,19 +49,12 @@ We will organize our Figma variables using four main collections:
 
 > Note: 'Design Tokens' and 'Global Primitives' collections can be kept in sync with your codebase's theme definitions, which will be the single source of truth (SSOT).
 
-### Types of Variables
-Collection | Visibility | &nbsp;
-:--- |:--- |:---
-`Design Tokens` | Published | Define colors, spacing, shadows, and sizing for components. Groups enforce consistent styling. Sync these with code to ensure consistency.
-`Global Primitives` | Published | Store base values: colors (grey-90, red-50), font sizes, and weights. Organize them into themes (Default, High Contrast) for quick swaps. Sync these with code to ensure consistency.
-`Language` | Published | Holds text strings for buttons, menus, and headers. Groups like Header or Sidebar let you switch languages. Centralizes translations for straightforward editing.
-`Private Primitives` | Hidden | Contain agnostic values: numbers (0, 4, 8), black/white, and font weights. These build spacing scales, typography, and colors for other collections, keeping math consistent and reusable.
-
 
 ## Structuring Within Collections: Groups
 Now, let’s deep dive into how groups within each collection drive precision and flexibility.
 
-#### Design Tokens Collection
+#### 01. Design Tokens Collection
+Define colors, spacing, shadows, and sizing for components. Groups enforce consistent styling. Sync these with codebase's theme definitions to ensure consistency.
 
 ```
 ┌───────────────────┐                         
@@ -89,7 +89,9 @@ Now, let’s deep dive into how groups within each collection drive precision an
 ```
 
 
-#### Global Primitives Collection
+#### 02. Global Primitives Collection
+Store base values: colors (grey-90, red-50), font sizes, and weights. Organize them into themes (Default, High Contrast) for quick swaps. Sync these with code to ensure consistency.
+
 ```
 ┌───────────────────┐                                                                  
 │ Global Primitives │                                                                  
@@ -137,7 +139,9 @@ Now, let’s deep dive into how groups within each collection drive precision an
                                                        └────────────┘                  
 ```
 
-#### Language Collection
+#### 03. Language Collection
+Holds text strings for gloabl areas, components, patterns, and abstractions. Centralizes translations for editing.
+
 ```
 ┌───────────────────┐                                  
 │     Language      │                                  
@@ -158,8 +162,8 @@ Now, let’s deep dive into how groups within each collection drive precision an
                                      └────────────────┘
 ```
 
-#### Private Primitives Collection
-Private primitives store agnostic values used by global primitives and design token variable collections in Figma. Example: 0, 1, 2, 4, 8, 12... and 100, 200, 300...
+#### 04. Private Primitives Collection
+Private primitives contain agnostic values (numbers, scales, black/white) used by global primitives and design token variable collections. These build spacing scales, and colors for other collections, keeping math consistent and reusable.
 
 ```
 ┌───────────────────┐          
@@ -186,6 +190,3 @@ Private primitives store agnostic values used by global primitives and design to
           └─▶│ regular, bold  │
              └────────────────┘
 ```
-
----
-
