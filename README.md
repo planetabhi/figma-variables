@@ -44,7 +44,6 @@ We will organize our Figma variables using four main collections:
 
 > Note: 'Design Tokens' and 'Global Primitives' collections can be kept in sync with your codebase's theme definitions, which will be the single source of truth (SSOT).
 
-
 ## Structuring Within Collections: Groups
 Now, let’s deep dive into how groups within each collection drive precision and flexibility.
 
@@ -231,9 +230,10 @@ Private primitives contain agnostic values (numbers, scales, black/white) used b
 
 ---
 
-## Visualizing Variables Structuring
-A tree string that visualizes the overall structure of the variables in Figma:
+## Visualizing Variables
+A tree string that visualizes the overall variables structure.
 
+#### In Figma
 ```
 .
 ├── Design Tokens
@@ -245,7 +245,6 @@ A tree string that visualizes the overall structure of the variables in Figma:
 │   │   ├── Base
 │   │   ├── Border
 │   │   ├── Content
-│   │   ├── Highlight
 │   │   └── more...
 │   ├── Shadow
 │   ├── Sizing
@@ -267,10 +266,22 @@ A tree string that visualizes the overall structure of the variables in Figma:
 │   │   ├── Sidebar
 │   │   ├── Footer
 │   │   └── more...
-│   ├── Abstractions
 │   ├── Patterns
 │   └── more...
 └── Private Primitives/
+```
+
+#### In Code
+```
+.
+└── themes
+    ├── definitions
+    │   ├── dark
+    │   ├── light
+    │   └── tests
+    ├── design-tokens.js   // Generated from `Design Tokens` collection
+    ├── global.js          // Generated from `Global Primitives` collection
+    └── utils.js
 ```
 
 ---
