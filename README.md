@@ -1,5 +1,5 @@
 # Structuring Variables in Figma
-Building a scalable UI library in Figma starts with organizing variables thoughtfully. Without structure, managing colors, text, spacing, and themes becomes chaotic as projects grow. This repo walks through a clear, code-first approach to group variables by purpose — from foundational values to reusable design tokens and dynamic content. You'll learn how to reduce redundancy, streamline updates, and ensure consistency across components and platforms. Let's simplify the complexity.
+Building a scalable UI library in Figma starts with organizing variables thoughtfully. Without structure, managing colors, text, spacing, and themes becomes chaotic as projects grow. This repo walks through a clear, code-aligned approach to group variables by purpose — from foundational values to reusable design tokens and dynamic content. You'll learn how to reduce redundancy, streamline updates, and ensure consistency across components and platforms. Let's simplify the complexity.
 
 ### About Variables
 Variables in Figma store reusable values that can be applied to all kinds of design properties and prototyping actions. They help save time and effort when building designs, managing design systems, and creating complex prototyping flows.
@@ -195,3 +195,44 @@ Private primitives contain agnostic values (numbers, scales, black/white) used b
 - Variables, unlike styles, enable dynamic design changes across contexts. For instance, switch between light and dark modes or adjust padding for different devices. This allows for adaptable component systems.
 - Variables provide design flexibility, allowing instance-specific value changes like button text or color. Styles maintain design consistency for elements like button styles, headings, or color palettes.
 - Variables store raw, single values, while styles store sets of values.
+
+
+### Tree String
+```
+.
+├── Design Tokens
+│   ├── Border
+│   │   ├── Width
+│   │   └── Radius
+│   ├── Colors
+│   │   ├── Background
+│   │   ├── Base
+│   │   ├── Border
+│   │   ├── Content
+│   │   ├── Highlight
+│   │   └── more...
+│   ├── Shadow
+│   ├── Sizing
+│   ├── Spacing
+│   └── more...
+├── Global Primitives
+│   ├── Colors
+│   │   ├── Default theme/
+│   │   ├── High contrast/
+│   │   └── more...
+│   └── Typography
+│       ├── Font family
+│       ├── Font size
+│       ├── Font weight
+│       └── Line height
+├── Language
+│   ├── Global Areas
+│   │   ├── Header
+│   │   ├── Sidebar
+│   │   ├── Footer
+│   │   └── more...
+│   ├── Abstractions
+│   ├── Patterns
+│   └── more...
+└── Private Primitives/
+```
