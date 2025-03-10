@@ -25,7 +25,7 @@ You can further organize variables by placing them into groups within a collecti
 ---
 
 
-### Structuring Collections
+## Structuring Collections
 We will organize our Figma variables using four main collections:
 
 ```
@@ -43,7 +43,7 @@ We will organize our Figma variables using four main collections:
 
 > Note: 'Design Tokens' and 'Global Primitives' are in sync with the codebase's theme definitions.
 
-
+## Structuring Within Collections: Groups
 #### Design Tokens
 Design tokens represent an abstraction in which a referenced value is used.
 
