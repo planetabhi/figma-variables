@@ -1,4 +1,4 @@
-# Structuring Variables in Figma
+# Structuring Figma Variables by Purpose
 Building a scalable UI library in Figma starts with organizing variables thoughtfully. Without structure, managing colors, text, spacing, and themes becomes chaotic as projects grow. This guide walks through a clear, codebase-aligned approach to structure variables by purpose — from foundational values to reusable design tokens and dynamic content. You'll learn how to reduce redundancy, streamline updates, and ensure consistency across components and platforms. Let's simplify the complexity.
 
 ### About Variables
@@ -7,10 +7,10 @@ Variables in Figma store reusable values that can be applied to all kinds of des
 ### Types of Variables
 Type | Defined by | &nbsp;
 :--- |:--- |:---
-`Color` | Solid fills | Color variables are solid values like #000000. Use them for theming (Dark/Light modes) and organizing your palette.
-`Number` | Number values | Number variables hold values like 24 or 12.75. Use them for responsive design, language variations, and reusable text styles.
-`String` | Text strings | String variables use text (like 'Hello') for language swaps, text styles, and prototype variants.
-`Boolean` | True, false values | Boolean variables use true/false. Use them to show/hide layers.
+`Color` | Solid fills | Solid values like #000000. Used for theming and organizing palette.
+`Number` | Number values | Hold values like 16. Used for responsive, language, and text styles.
+`String` | Text strings | Use text (like 'Hello') for language, text styles, and prototype variants.
+`Boolean` | True, false values | Boolean variables use true/false. Used to show/hide layers.
 
 ### Collections and Groups
 - Both collections and groups are used to organize variables and improve their discoverability.
@@ -21,13 +21,6 @@ Type | Defined by | &nbsp;
 
 ## Structuring Collections
 We will organize our Figma variables using four main collections:
-
-&nbsp; | Collection | Visibility
-:--- |:--- |:---
-01 | `Design Tokens` | Published
-02 | `Global Primitives` | Published
-03 | `Language` | Published
-04 | `Private Primitives` | Hidden
 
 ```
 ┌───────────────────┐                                                                  
@@ -41,6 +34,13 @@ We will organize our Figma variables using four main collections:
 │    (Published)    │ │    (Published)    │ │    (Published)    │ │      (Hidden)     │
 └───────────────────┘ └───────────────────┘ └───────────────────┘ └───────────────────┘                                        
 ```
+
+&nbsp; | Collection Name | Collection Visibility | Codes Definition
+:--- |:--- |:--- |:---
+01 | **Design Tokens** | `Published` | `In sync`
+02 | **Global Primitives** | `Published` | `In sync`
+03 | **Language** | `Published` | `Optional`
+04 | **Private Primitives** | `Hidden` | `Not applicable`
 
 > Note: 'Design Tokens' and 'Global Primitives' collections can be kept in sync with your codebase's theme definitions, which will be the single source of truth (SSOT).
 
@@ -202,7 +202,7 @@ Holds text strings for gloabl areas, components, patterns, and abstractions. Cen
 Private primitives contain agnostic values (numbers, scales, black/white) used by global primitives and design token variable collections. These build spacing scales, and colors for other collections, keeping math consistent and reusable.
 
 - Collection visibility (Figma): `Hidden`
-- Theme definition (Code): `Not Applicable`
+- Theme definition (Code): `Not applicable`
 
 ```
 ┌───────────────────┐          
@@ -229,12 +229,14 @@ Private primitives contain agnostic values (numbers, scales, black/white) used b
              └────────────────┘
 ```
 
-### Visualizing the Overall Variables
+---
+
+## Visualizing the Overall Structure
 Below is a tree string that visualizes the overall structure of the variables in Figma:
 
 ```
 .
-├── Design Tokens (Published)
+├── Design Tokens
 │   ├── Border
 │   │   ├── Width
 │   │   └── Radius
@@ -249,7 +251,7 @@ Below is a tree string that visualizes the overall structure of the variables in
 │   ├── Sizing
 │   ├── Spacing
 │   └── more...
-├── Global Primitives (Published)
+├── Global Primitives
 │   ├── Colors
 │   │   ├── Default theme/
 │   │   ├── High contrast/
@@ -259,7 +261,7 @@ Below is a tree string that visualizes the overall structure of the variables in
 │       ├── Font size
 │       ├── Font weight
 │       └── Line height
-├── Language (Published)
+├── Language
 │   ├── Global Areas
 │   │   ├── Header
 │   │   ├── Sidebar
@@ -268,7 +270,7 @@ Below is a tree string that visualizes the overall structure of the variables in
 │   ├── Abstractions
 │   ├── Patterns
 │   └── more...
-└── Private Primitives (Hidden)/ 
+└── Private Primitives/
 ```
 
 ---
