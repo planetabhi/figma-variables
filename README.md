@@ -35,7 +35,7 @@ We will organize our Figma variables using four main collections:
 └───────────────────┘ └───────────────────┘ └───────────────────┘ └───────────────────┘                                        
 ```
 
-&nbsp; | Collection Name | Collection Visibility | Codes Definition
+&nbsp; | Collection Name | Collection Visibility | Code Definition
 :--- |:--- |:--- |:---
 01 | **Design Tokens** | `Published` | `In sync`
 02 | **Global Primitives** | `Published` | `In sync`
@@ -159,8 +159,8 @@ Here's a simplified example of what `global.js` could look like in practice:
 ```js
 export const globalPrimitives = {
   'colors': {
-    'defaultTheme': {
-      'grey': { 'grey-90': '', 'grey-00': '' }
+    'default': {
+      'grey': { 'grey-90': 'oklch(0% 0 0)', 'grey-00': 'oklch(100% 0 0)' }
     }
   },
   'typography': {
@@ -245,16 +245,16 @@ A tree string that visualizes the variables structure.
 │   │   ├── Base
 │   │   ├── Border
 │   │   ├── Content
-│   │   └── more...
+│   │   └── ...
 │   ├── Shadow
 │   ├── Sizing
 │   ├── Spacing
-│   └── more...
+│   └── ...
 ├── Global Primitives
 │   ├── Colors
 │   │   ├── Default theme/
 │   │   ├── High contrast/
-│   │   └── more...
+│   │   └── ...
 │   └── Typography
 │       ├── Font family
 │       ├── Font size
@@ -265,9 +265,9 @@ A tree string that visualizes the variables structure.
 │   │   ├── Header
 │   │   ├── Sidebar
 │   │   ├── Footer
-│   │   └── more...
+│   │   └── ...
 │   ├── Patterns
-│   └── more...
+│   └── ...
 └── Private Primitives/
 ```
 
