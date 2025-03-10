@@ -51,7 +51,8 @@ Now, let’s deep dive into how groups within each collection drive precision an
 #### 01. Design Tokens Collection
 Define colors, spacing, shadows, and sizing for components. Groups enforce consistent styling.
 
-> Visibility: `Published`
+- Visibility: `Published`
+- Status: `In sync` with theme definitions
 
 ```
 ┌───────────────────┐                         
@@ -84,7 +85,7 @@ Define colors, spacing, shadows, and sizing for components. Groups enforce consi
                                 └────────────┘
 ```
 
-In sync with codebase's theme definitions. In the codebase, `design-tokens.js` might look something like this (rough example):
+In the codebase, `design-tokens.js` might look something like this (rough example):
 
 ```js
 export const designTokens = {
@@ -105,7 +106,8 @@ export const designTokens = {
 #### 02. Global Primitives Collection
 Store base values: colors (grey-90, red-50), font sizes, and weights. Organize them into themes (Default, High Contrast) for quick swaps.
 
-> Visibility: `Published`
+- Visibility: `Published`
+- Status: `In sync` with theme definitions
 
 ```
 ┌───────────────────┐                                                                  
@@ -153,7 +155,7 @@ Store base values: colors (grey-90, red-50), font sizes, and weights. Organize t
                                                        └────────────┘                  
 ```
 
-In sync with codebase's theme definitions. Here's a simplified example of what `global.js` could look like in practice:
+Here's a simplified example of what `global.js` could look like in practice:
 
 ```js
 export const globalPrimitives = {
@@ -174,7 +176,8 @@ export const globalPrimitives = {
 #### 03. Language Collection
 Holds text strings for gloabl areas, components, patterns, and abstractions. Centralizes translations for design usage.
 
-> Visibility: `Published`
+- Visibility: `Published`
+- Status: `Async`
 
 ```
 ┌───────────────────┐                                  
@@ -198,7 +201,8 @@ Holds text strings for gloabl areas, components, patterns, and abstractions. Cen
 #### 04. Private Primitives Collection
 Private primitives contain agnostic values (numbers, scales, black/white) used by global primitives and design token variable collections. These build spacing scales, and colors for other collections, keeping math consistent and reusable.
 
-> Visibility: `Hidden`
+- Visibility: `Hidden`
+- Status: `Async`
 
 ```
 ┌───────────────────┐          
