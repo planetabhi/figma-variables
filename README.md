@@ -231,7 +231,7 @@ Private primitives contain agnostic values (numbers, scales, black/white) used b
 ---
 
 ## Visualizing Variables
-A tree string that visualizes the overall variables structure.
+A tree string that visualizes the variables structure.
 
 #### In Figma
 ```
@@ -279,8 +279,8 @@ A tree string that visualizes the overall variables structure.
     │   ├── dark
     │   ├── light
     │   └── tests
-    ├── design-tokens.js   // Generated from `Design Tokens` collection
-    ├── global.js          // Generated from `Global Primitives` collection
+    ├── design-tokens.js   // from `Design Tokens` Figma collection
+    ├── global.js          // from `Global Primitives` Figma collection
     └── utils.js
 ```
 
