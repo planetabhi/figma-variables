@@ -27,12 +27,12 @@ Variable type | Defined by | &nbsp;
 ## Structuring Collections
 We will organize our Figma variables using four main collections:
 
-Collection | Visibility | &nbsp;
+&nbsp; | Collection | Visibility
 :--- |:--- |:---
-`Design Tokens` | Published
-`Global Primitives` | Published
-`Language` | Published
-`Private Primitives` | Hidden
+01 | `Design Tokens` | Published
+02 | `Global Primitives` | Published
+03 | `Language` | Published
+04 | `Private Primitives` | Hidden
 
 ```
 ┌───────────────────┐                                                                  
