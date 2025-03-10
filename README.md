@@ -236,7 +236,7 @@ Below is a tree string that visualizes the overall structure of the variables in
 
 ```
 .
-├── Design Tokens (Published)
+├── Design Tokens
 │   ├── Border
 │   │   ├── Width
 │   │   └── Radius
@@ -251,7 +251,7 @@ Below is a tree string that visualizes the overall structure of the variables in
 │   ├── Sizing
 │   ├── Spacing
 │   └── more...
-├── Global Primitives (Published)
+├── Global Primitives
 │   ├── Colors
 │   │   ├── Default theme/
 │   │   ├── High contrast/
@@ -261,7 +261,7 @@ Below is a tree string that visualizes the overall structure of the variables in
 │       ├── Font size
 │       ├── Font weight
 │       └── Line height
-├── Language (Published)
+├── Language
 │   ├── Global Areas
 │   │   ├── Header
 │   │   ├── Sidebar
@@ -270,7 +270,7 @@ Below is a tree string that visualizes the overall structure of the variables in
 │   ├── Abstractions
 │   ├── Patterns
 │   └── more...
-└── Private Primitives (Hidden)/ 
+└── Private Primitives/
 ```
 
 ---
