@@ -163,7 +163,7 @@ Private primitives contain agnostic values (numbers, scales, black/white) used b
 ```
 ┌───────────────────┐          
 │Private Primitives │          
-│    (Examples)     │          
+│     (Hidden)      │          
 └───────────────────┘          
           │                    
           │  ┌────────────────┐
@@ -186,21 +186,12 @@ Private primitives contain agnostic values (numbers, scales, black/white) used b
              └────────────────┘
 ```
 
----
+### Visualizing the Overall Structure
+Below is a tree string that visualizes the overall structure of the variables:
 
-## Misc
-
-### Differences b/w Variables and Styles
-- Variables define reusable values like colors and spacing, while styles are predefined sets of design properties, such as text and effects.
-- Variables, unlike styles, enable dynamic design changes across contexts. For instance, switch between light and dark modes or adjust padding for different devices. This allows for adaptable component systems.
-- Variables provide design flexibility, allowing instance-specific value changes like button text or color. Styles maintain design consistency for elements like button styles, headings, or color palettes.
-- Variables store raw, single values, while styles store sets of values.
-
-
-### Tree String
 ```
 .
-├── Design Tokens
+├── Design Tokens (Published)
 │   ├── Border
 │   │   ├── Width
 │   │   └── Radius
@@ -215,7 +206,7 @@ Private primitives contain agnostic values (numbers, scales, black/white) used b
 │   ├── Sizing
 │   ├── Spacing
 │   └── more...
-├── Global Primitives
+├── Global Primitives (Published)
 │   ├── Colors
 │   │   ├── Default theme/
 │   │   ├── High contrast/
@@ -225,7 +216,7 @@ Private primitives contain agnostic values (numbers, scales, black/white) used b
 │       ├── Font size
 │       ├── Font weight
 │       └── Line height
-├── Language
+├── Language (Published)
 │   ├── Global Areas
 │   │   ├── Header
 │   │   ├── Sidebar
@@ -234,5 +225,15 @@ Private primitives contain agnostic values (numbers, scales, black/white) used b
 │   ├── Abstractions
 │   ├── Patterns
 │   └── more...
-└── Private Primitives/
+└── Private Primitives (Hidden)/ 
 ```
+
+---
+
+## Misc
+
+### Differences b/w Variables and Styles
+- Variables define reusable values like colors and spacing, while styles are predefined sets of design properties, such as text and effects.
+- Variables, unlike styles, enable dynamic design changes across contexts. For instance, switch between light and dark modes or adjust padding for different devices. This allows for adaptable component systems.
+- Variables provide design flexibility, allowing instance-specific value changes like button text or color. Styles maintain design consistency for elements like button styles, headings, or color palettes.
+- Variables store raw, single values, while styles store sets of values.
