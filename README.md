@@ -17,12 +17,6 @@ Type | Defined by | &nbsp;
 - A collection is a set of variables and modes. Collections facilitate the organization of related variables.
 - You can further organize variables by placing them into groups within a collection.
 
-### Differences b/w Variables and Styles
-- Variables define reusable values like colors and spacing, while styles are predefined sets of design properties, such as text and effects.
-- Variables, unlike styles, enable dynamic design changes across contexts. For instance, switch between light and dark modes or adjust padding for different devices. This allows for adaptable component systems.
-- Variables provide design flexibility, allowing instance-specific value changes like button text or color. Styles maintain design consistency for elements like button styles, headings, or color palettes.
-- Variables store raw, single values, while styles store sets of values.
-
 ---
 
 ## Structuring Collections
@@ -191,3 +185,13 @@ Private primitives contain agnostic values (numbers, scales, black/white) used b
           └─▶│ regular, bold  │
              └────────────────┘
 ```
+
+---
+
+## Misc
+
+### Differences b/w Variables and Styles
+- Variables define reusable values like colors and spacing, while styles are predefined sets of design properties, such as text and effects.
+- Variables, unlike styles, enable dynamic design changes across contexts. For instance, switch between light and dark modes or adjust padding for different devices. This allows for adaptable component systems.
+- Variables provide design flexibility, allowing instance-specific value changes like button text or color. Styles maintain design consistency for elements like button styles, headings, or color palettes.
+- Variables store raw, single values, while styles store sets of values.
