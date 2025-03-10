@@ -1,9 +1,31 @@
-# Variables Strategy, Figma
-Variables in Figma Design store reusable values that can be applied to all kinds of design properties and prototyping actions. They help save time and effort when building designs, managing design systems, and creating complex prototyping flows.
+# Structuring Variables in Figma
+Variables in Figma store reusable values that can be applied to all kinds of design properties and prototyping actions. They help save time and effort when building designs, managing design systems, and creating complex prototyping flows.
+
+### Differences b/w Variables and Styles
+- Variables define reusable values like colors and spacing, while styles are predefined sets of design properties, such as text and effects.
+- Variables, unlike styles, enable dynamic design changes across contexts. For instance, switch between light and dark modes or adjust padding for different devices. This allows for adaptable component systems.
+- Variables provide design flexibility, allowing instance-specific value changes like button text or color. Styles maintain design consistency for elements like button styles, headings, or color palettes.
+- Variables store raw, single values, while styles store sets of values.
+
+### Types of Variables
+Variable type | Defined by
+:--- |:---
+`Color` | Solid fills
+`Number` | Number values
+`String` | Text strings
+`Boolean` | True, false values
+
+### Collections and Groups
+Both collections and groups are used to organize variables and improve their discoverability.
+
+A collection is a set of variables and modes. Collections facilitate the organization of related variables. For example, you might use one collection to localize text across different languages, and another collection for spatial values.
+
+You can further organize variables by placing them into groups within a collection. For instance, use one group for text colors, and another for stroke colors.
+
+---
 
 
 ### Structuring Collections
-A collection is a set of variables. Collections can be used to organize related variables together.
 
 ```
 ┌───────────────────┐                                                                  
@@ -157,8 +179,3 @@ Private primitives store agnostic values used by global primitives and design to
 
 ---
 
-### Differences b/w Variables and Styles
-- Variables are a more advanced feature, and they allow you to define and reuse values like colors, text, and spacing across your designs. On the other hand, styles are predefined sets of design properties such as text styles, color styles, and effect styles.
-- Variables allow designs to change when used in various contexts, because of their dynamic nature, unlike styles. For example, you can change your designs from light mode to dark mode or have padding values change when designing for different devices. This makes variables useful for creating systems with adaptable components.
-- Variables offer a more flexible design process in creating flexible design components, especially where you want to change values like button text or color on different instances of the same component. Styles are typically used for maintaining consistent design elements  like button styles, text headings, or colour palettes.
-- Variables can store raw, single values, while styles store sets of values.
