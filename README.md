@@ -22,12 +22,12 @@ Type | Defined by | &nbsp;
 ## Structuring Collections
 We will organize our Figma variables using four main collections:
 
-&nbsp; | Collection | Visibility
-:--- |:--- |:---
-01 | `Design Tokens` | Published
-02 | `Global Primitives` | Published
-03 | `Language` | Published
-04 | `Private Primitives` | Hidden
+&nbsp; | Collection Name | Collection Visibility | Codes Definition
+:--- |:--- |:--- |:---
+01 | **Design Tokens** | `Published` | `In sync`
+02 | **Global Primitives** | `Published` | `In sync`
+03 | **Language** | `Published` | `Optional`
+04 | **Private Primitives** | `Hidden` | `Not applicable`
 
 ```
 ┌───────────────────┐                                                                  
@@ -202,7 +202,7 @@ Holds text strings for gloabl areas, components, patterns, and abstractions. Cen
 Private primitives contain agnostic values (numbers, scales, black/white) used by global primitives and design token variable collections. These build spacing scales, and colors for other collections, keeping math consistent and reusable.
 
 - Collection visibility (Figma): `Hidden`
-- Theme definition (Code): `Not Applicable`
+- Theme definition (Code): `Not applicable`
 
 ```
 ┌───────────────────┐          
