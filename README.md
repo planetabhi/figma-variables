@@ -41,7 +41,7 @@ The proposed framework categorizes variables into four collections, each serving
 └───────────────────┘ └───────────────────┘ └───────────────────┘ └───────────────────┘                                        
 ```
 
-&nbsp; | Collection Name | Collection Visibility | Code Definition | &nbsp;
+&nbsp; | Name | Visibility | Code Definition | &nbsp;
 :--- |:--- |:--- |:--- |:---
 01 | **Design Tokens** | `Published` | `In sync`  | Context for the intended use of a design primitive.
 02 | **Global Primitives** | `Published` | `In sync` | Basic building blocks of the design.
