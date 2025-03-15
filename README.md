@@ -1,13 +1,13 @@
 # Structuring Figma Variables
-Building a scalable UI library in Figma starts with organizing variables thoughtfully. Without structure, managing primitives, semantics, and themes becomes chaotic as projects grow. Let's explore a clear, implementation-aligned method to structure variables by purpose — from foundational values to reusable design tokens and dynamic content. A practical approach to reducing redundancy, streamlining updates, and maintaining consistency across components and abstractions.
+Building a scalable UI library in Figma begins with thoughtful organization of variables. As projects grow, managing primitives, semantics, and themes without proper structure can quickly become overwhelming. Let's explore a clear, implementation-aligned approach to structuring variables by purpose — from foundational values to reusable design tokens and dynamic content. Together, we'll discover a practical approach to reducing redundancy, streamlining updates, and maintaining consistency across components and abstractions.
 
-#### Variables in Figma
-Before diving into structuring, it's essential to understand what variables are and why they matter. In essence, variables in Figma store reusable values that can be applied to all kinds of design properties and prototyping actions. They help save time and effort when building designs, managing design systems, and creating complex prototyping flows.
+#### Understanding Variables in Figma
+Before diving into structuring, it helps to understand what variables are and why they matter. At their core, variables in Figma store reusable values that can be applied to various design properties and prototyping actions. They're incredibly useful for saving time and effort when creating designs, managing design systems, and building complex prototyping flows.
 
-Imagine you're designing a button. Instead of manually setting the color, padding, and border radius every time, you can use variables. If you need to change the button's color across your organization projects, you simply update the variable, and the change propagates everywhere. This is the power of variables.
+Imagine designing a button in your project. Instead of manually setting the color, padding, and border radius each time, you could use variables. When you need to change the button's color across your organization's projects, you simply update the variable once, and the change appears everywhere. That's the magic of variables.
 
 #### Types of Variables
-Figma offers four types of variables, each serving a distinct purpose:
+Figma offers four types of variables, each serving a unique purpose:
 
 Type | Defined by | &nbsp;
 :--- |:--- |:---
@@ -17,24 +17,24 @@ Type | Defined by | &nbsp;
 `Boolean` | True, false values | Boolean variables use true/false. Used to show/hide layers.
 
 #### Collections and Groups
-To keep your variables organized, Figma provides collections and groups.
+Figma provides collections and groups to help keep your variables organized:
 
-- Both collections and groups are used to organize variables and improve their discoverability.
-- A collection is a set of variables and modes. Collections facilitate the organization of related variables.
-- You can further organize variables by placing them into groups within a collection.
+- Both collections and groups make variables more organized and easier to find.
+- A collection brings together related variables and modes, making organization more intuitive.
+- Within collections, you can further organize variables by placing them into logical groups.
 
-#### Differences b/w Variables and Styles
-- Variables define reusable values like colors and spacing, while styles are predefined sets of design properties, such as text and effects.
-- Variables, unlike styles, enable dynamic design changes across contexts. For instance, switch between light and dark modes or adjust padding for different devices. This allows for adaptable component systems.
-- Variables provide design flexibility, allowing instance-specific value changes like button text or color. Styles maintain design consistency for elements like button styles, headings, or color palettes.
-- Variables store raw, single values, while styles store sets of values.
+#### Variables vs. Styles
+- Variables define reusable values like colors and spacing, while styles are predefined sets of design properties, such as text formatting and effects.
+- Unlike styles, variables enable dynamic design changes across different contexts. For instance, you can easily switch between light and dark modes or adjust padding for different devices, creating more adaptable component systems.
+- Variables offer greater design flexibility, allowing you to change specific values like button text or color for individual instances. Styles help maintain design consistency for elements like button styles, headings, or color palettes.
+- Variables store individual values, while styles store collections of related values.
 
 ---
 
 ## Methodology
-> Structuring collections by abstraction.
+> Let's organize collections by abstraction levels.
 
-We'll organize Figma variables into four collections, each serving distinct purposes.
+Together, we can organize Figma variables into four collections, each serving a distinct purpose.
 
 ```
 ┌───────────────┐                                                             
@@ -56,23 +56,23 @@ We'll organize Figma variables into four collections, each serving distinct purp
 03 | **Language** | `Published` | `Optional` | Text strings for adapting to different languages.
 04 | **Private Primitives** | `Hidden` | `N/A` | Raw values intended for internal use.
 
-#### Rationale
-To tackle the complexities of scaling design system UI libraries, we developed this collection structure through enterprise project iterations. It balances flexibility and governance, addressing key challenges:
-- **Abstraction Clarity**: Separating raw values from semantic tokens aligns design with development. This prevents mixing hex codes with contextual tokens, avoiding style inconsistencies.
-- **Scaling Consistency**: Private Primitives enforce mathematical scales, ensuring uniform spacing. Designers use scaled values, not manual padding, for consistent UI ratios.
-- **Localization Efficiency**: A dedicated Language collection decouples text from components, enabling global language switches.
-- **Code as Source**: "Design Tokens" and "Global Primitives" generate raw, tech-agnostic SSOT. Figma structures directly mirror codebase themes, streamlining design-to-dev handoff.
+#### The Reasoning Behind This Approach
+Through many iterations with enterprise projects, we've developed this collection structure to balance flexibility with governance. It addresses several key challenges we all face when scaling design systems:
+- **Clarity in Abstraction**: Separating raw values from semantic tokens aligns design with development. This prevents mixing hex codes with contextual tokens, helping everyone avoid style inconsistencies.
+- **Consistency at Scale**: Private primitives help enforce mathematical scales, ensuring uniform spacing throughout interfaces. Designers can use these scaled values rather than manual padding, creating consistent UI element ratios.
+- **Efficient Localization**: A dedicated language collection separates text from components, making it simple to switch between languages with minimal effort.
+- **Code as the Source of Truth**: "Design Tokens" and "Global Primitives" generate raw, tech-agnostic values. Figma structures mirror codebase themes directly, making design-to-development handoff much smoother.
 
-The approach provides structure to prevent chaos while maintaining the flexibility needed for complex product ecosystems.
+This approach gives us structure to prevent chaos while preserving the flexibility needed for complex product ecosystems.
 
 ---
 
-Let's take a closer look at each collection and see how the groups inside them provide precision and flexibility.
+Let's take a closer look at each collection and explore how the groups within them provide both precision and flexibility.
 
 #### Collection 01: Design Tokens
-Design Tokens provide a meaningful context for how a design primitive should be used. For example, you may have a design token called `--background-warning` to convey a sense of urgency or potential danger. 
+Design Tokens provide a meaningful context for how a design primitive should be used. For example, a design token called `--background-warning` instantly conveys a sense of urgency or potential caution.
 
-Define colors, spacing, shadows, and sizing for components. Groups enforce consistent styling.
+These tokens define colors, spacing, shadows, and sizing for components, with groups that enforce consistent styling across your interface.
 
 - Collection visibility (Figma): `Published`
 - Theme definition (Code): `In sync`
@@ -108,7 +108,7 @@ Define colors, spacing, shadows, and sizing for components. Groups enforce consi
                                 └────────────┘
 ```
 
-In the codebase, `design-tokens.js` might look something like this:
+In your codebase, `design-tokens.js` might look something like this:
 
 ```js
 export const designTokens = {
@@ -127,9 +127,9 @@ export const designTokens = {
 ```
 
 #### Collection 02: Global Primitives
-Global Primitives are your design system’s basic building blocks, like colors, spacing, and sizing. They form the foundations of your design but aren’t used directly in components or layouts.
+Global Primitives form your design system's fundamental building blocks, like colors, spacing, and sizing. They create the foundation of your design but aren't typically used directly in components or layouts.
 
-Store base values: colors (grey-90, red-50), font sizes, and weights. Organize them into themes (Default, High Contrast) for quick swaps.
+These primitives store base values such as colors (grey-90, red-50), font sizes, and weights. You can organize them into themes (Default, High Contrast) for quick switching.
 
 - Collection visibility (Figma): `Published`
 - Theme definition (Code): `In sync`
@@ -199,7 +199,7 @@ export const globalPrimitives = {
 ```
 
 #### Collection 03: Language
-Holds text strings for global areas, components, patterns, and abstractions. Centralizes translations for design usage.
+The Language collection holds text strings for global areas, components, patterns, and abstractions. It centralizes translations, making them accessible throughout your design system.
 
 - Collection visibility (Figma): `Published`
 - Theme definition (Code): `Optional`
@@ -224,7 +224,7 @@ Holds text strings for global areas, components, patterns, and abstractions. Cen
 ```
 
 #### Collection 04. Private Primitives
-Private primitives contain agnostic values (numbers, scales, black/white) used by global primitives and design token variable collections. These build spacing scales, and colors for other collections, keeping math consistent and reusable.
+Private primitives contain fundamental values (numbers, scales, black/white) that are used by other collections. They help build spacing scales and colors for other collections, ensuring mathematical consistency across your design system.
 
 - Collection visibility (Figma): `Hidden`
 - Theme definition (Code): `Not applicable`
@@ -257,7 +257,7 @@ Private primitives contain agnostic values (numbers, scales, black/white) used b
 ---
 
 ## Bringing It All Together
-By organizing Figma variables into these four collections, we create a system that's both robust and scalable. By adopting this structured approach, we not only achieve consistency but also enhance collaboration, scalability, and flexibility. We empower our teams to build better user interfaces, faster.
+By organizing our Figma variables into these four collections, we create a system that's both robust and scalable. This structured approach enhances collaboration, scalability, and flexibility, empowering our teams to build better user interfaces with greater efficiency.
 
 #### Variables in Figma
 ```
@@ -297,7 +297,7 @@ By organizing Figma variables into these four collections, we create a system th
 └── Private Primitives/
 ```
 
-But journey doesn't end here. We need to ensure our Figma variables stay in sync with codebase, creating a single source of truth (SSOT). This can be achieved through custom plugins and automated scripts, bridging the gap between design and development.
+Our journey doesn't end with organization alone. Let's also make sure our Figma variables stay in sync with the codebase, creating a single source of truth. We can achieve this through custom plugins and automated scripts that bridge the gap between design and development.
 
 #### In the Codebase
 ```
@@ -312,7 +312,7 @@ But journey doesn't end here. We need to ensure our Figma variables stay in sync
     └── utils.js
 ```
 
-By adopting this battle-tested, structured approach, we not only achieve consistency but also enhance collaboration, scalability, and flexibility. We empower our teams to build better user interfaces, faster.
+By embracing this battle-tested approach, we can achieve remarkable consistency while enhancing collaboration across design and development teams. This structure provides the flexibility needed for complex projects while maintaining the rigor required for enterprise-level design systems.
 
 ---
 
