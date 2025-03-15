@@ -1,10 +1,14 @@
 # Structuring Figma Variables by Purpose
-Building a scalable UI library in Figma starts with organizing variables thoughtfully. Without structure, managing colors, text, spacing, and themes becomes chaotic as projects grow. This guide walks through a clear, codebase-aligned approach to structure variables by purpose — from foundational values to reusable design tokens and dynamic content. You'll learn how to reduce redundancy, streamline updates, and ensure consistency across components and abstractions. Let's simplify the complexity.
+Building a scalable UI library in Figma starts with organizing variables thoughtfully. Without structure, managing primitives, semantics, and themes becomes chaotic as projects grow. This guide walks through a clear, codebase-aligned approach to structure variables by purpose — from foundational values to reusable design tokens and dynamic content. You'll learn how to reduce redundancy, streamline updates, and ensure consistency across components and abstractions. Let's simplify the complexity.
 
 #### About Variables
-Variables in Figma store reusable values that can be applied to all kinds of design properties and prototyping actions. They help save time and effort when building designs, managing design systems, and creating complex prototyping flows.
+Before diving into structuring, it's essential to understand what variables are and why they matter. In essence, variables in Figma store reusable values that can be applied to all kinds of design properties and prototyping actions. They help save time and effort when building designs, managing design systems, and creating complex prototyping flows.
+
+Imagine you're designing a button. Instead of manually setting the color, padding, and border radius every time, you can use variables. If you need to change the button's color across your organization projects, you simply update the variable, and the change propagates everywhere. This is the power of variables.
 
 #### Types of Variables
+Figma offers four types of variables, each serving a distinct purpose:
+
 Type | Defined by | &nbsp;
 :--- |:--- |:---
 `Color` | Solid fills | Solid values like #000000. Used for theming and organizing palette.
@@ -13,6 +17,8 @@ Type | Defined by | &nbsp;
 `Boolean` | True, false values | Boolean variables use true/false. Used to show/hide layers.
 
 #### Collections and Groups
+To keep your variables organized, Figma provides collections and groups.
+
 - Both collections and groups are used to organize variables and improve their discoverability.
 - A collection is a set of variables and modes. Collections facilitate the organization of related variables.
 - You can further organize variables by placing them into groups within a collection.
@@ -20,7 +26,7 @@ Type | Defined by | &nbsp;
 ---
 
 ## Structuring Collections
-We will organize our Figma variables using four main collections:
+Now, let's get to structuring your collections. We'll use four main collections, each with a specific purpose.
 
 ```
 ┌───────────────────┐                                                                  
@@ -35,12 +41,12 @@ We will organize our Figma variables using four main collections:
 └───────────────────┘ └───────────────────┘ └───────────────────┘ └───────────────────┘                                        
 ```
 
-&nbsp; | Collection Name | Collection Visibility | Code Definition
-:--- |:--- |:--- |:---
-01 | **Design Tokens** | `Published` | `In sync`
-02 | **Global Primitives** | `Published` | `In sync`
-03 | **Language** | `Published` | `Optional`
-04 | **Private Primitives** | `Hidden` | `Not applicable`
+&nbsp; | Collection Name | Collection Visibility | Code Definition | &nbsp;
+:--- |:--- |:--- |:--- |:---
+01 | **Design Tokens** | `Published` | `In sync`  | These provide a meaningful context for how a design primitive should be used. For example, you may have a design token called “color-background-warning” to convey a sense of urgency or potential danger.
+02 | **Global Primitives** | `Published` | `In sync` | These are your design system’s basic building blocks, like colors, spacing, and sizing. They form the foundations of your design but aren’t used directly in components or layouts.
+03 | **Language** | `Published` | `Optional` | 
+04 | **Private Primitives** | `Hidden` | `Not applicable` | 
 
 > Note: 'Design Tokens' and 'Global Primitives' collections can be kept in sync with your codebase's theme definitions, which will be the single source of truth (SSOT).
 
@@ -230,8 +236,8 @@ Private primitives contain agnostic values (numbers, scales, black/white) used b
 
 ---
 
-## Visualizing Variables
-A tree string that visualizes the variables structure.
+## Bringing It All Together
+By organizing our Figma variables into these four collections, we create a system that's both robust and scalable. It's like building a city with well-planned streets and neighborhoods, ensuring everything works together seamlessly.
 
 #### In Figma
 ```
@@ -283,6 +289,8 @@ A tree string that visualizes the variables structure.
     ├── global.js          // from `Global Primitives` Figma collection
     └── utils.js
 ```
+
+By adopting this structured approach, we not only achieve consistency but also enhance collaboration, scalability, and flexibility. We empower our teams to build better user interfaces, faster.
 
 ---
 
