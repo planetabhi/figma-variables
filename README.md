@@ -312,7 +312,7 @@ But journey doesn't end here. We need to ensure our Figma variables stay in sync
     └── utils.js
 ```
 
-By adopting this battle-tested, structured approach, we not only achieve consistency but also enhance collaboration, scalability, and flexibility. We empower our teams to build better and faster.
+By adopting this battle-tested, structured approach, we not only achieve consistency but also enhance collaboration, scalability, and flexibility. We empower our teams to build better user interfaces, faster.
 
 ---
 
