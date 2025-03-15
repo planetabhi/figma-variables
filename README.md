@@ -25,7 +25,7 @@ To keep your variables organized, Figma provides collections and groups.
 
 ---
 
-## Methodology: The Four-Collection Framework
+## Methodology: Structuring Collections by Abstraction
 The proposed framework categorizes variables into four collections, each serving distinct purposes 
 
 ```
@@ -43,17 +43,14 @@ The proposed framework categorizes variables into four collections, each serving
 
 &nbsp; | Collection Name | Collection Visibility | Code Definition | &nbsp;
 :--- |:--- |:--- |:--- |:---
-01 | **Design Tokens** | `Published` | `In sync`  | 
-02 | **Global Primitives** | `Published` | `In sync` | 
-03 | **Language** | `Published` | `Optional` | Text strings for localization.
-04 | **Private Primitives** | `Hidden` | `Not applicable` | Raw values
+01 | **Design Tokens** | `Published` | `In sync`  | Context for the intended use of a design primitive.
+02 | **Global Primitives** | `Published` | `In sync` | Basic building blocks of the design.
+03 | **Language** | `Published` | `Optional` | Text strings for adapting to different languages.
+04 | **Private Primitives** | `Hidden` | `Not applicable` | Raw values intended for internal use.
 
-> Note: 'Design Tokens' and 'Global Primitives' collections can be kept in sync with your codebase's theme definitions, which will be the single source of truth (SSOT).
+Let's take a closer look at each collection and see how the groups inside them provide precision and flexibility
 
-## Structuring Within Collections: Groups
-Now, let’s deep dive into how groups within each collection drive precision and flexibility.
-
-#### 01. `Design Tokens` Collection
+#### 01. Design Tokens
 These provide a meaningful context for how a design primitive should be used. For example, you may have a design token called “color-background-warning” to convey a sense of urgency or potential danger. 
 
 Define colors, spacing, shadows, and sizing for components. Groups enforce consistent styling.
@@ -110,7 +107,7 @@ export const designTokens = {
 };
 ```
 
-#### 02. `Global Primitives` Collection
+#### 02. Global Primitives
 These are your design system’s basic building blocks, like colors, spacing, and sizing. They form the foundations of your design but aren’t used directly in components or layouts.
 
 Store base values: colors (grey-90, red-50), font sizes, and weights. Organize them into themes (Default, High Contrast) for quick swaps.
@@ -182,7 +179,7 @@ export const globalPrimitives = {
 };
 ```
 
-#### 03. `Language` Collection
+#### 03. Language
 Holds text strings for gloabl areas, components, patterns, and abstractions. Centralizes translations for design usage.
 
 - Collection visibility (Figma): `Published`
@@ -207,7 +204,7 @@ Holds text strings for gloabl areas, components, patterns, and abstractions. Cen
                                      └────────────────┘
 ```
 
-#### 04. `Private Primitives` Collection
+#### 04. Private Primitives
 Private primitives contain agnostic values (numbers, scales, black/white) used by global primitives and design token variable collections. These build spacing scales, and colors for other collections, keeping math consistent and reusable.
 
 - Collection visibility (Figma): `Hidden`
@@ -241,7 +238,7 @@ Private primitives contain agnostic values (numbers, scales, black/white) used b
 ---
 
 ## Bringing It All Together
-By organizing our Figma variables into these four collections, we create a system that's both robust and scalable. It's like building a city with well-planned streets and neighborhoods, ensuring everything works together seamlessly.
+By organizing Figma variables into these four collections, we create a system that's both robust and scalable. By adopting this structured approach, we not only achieve consistency but also enhance collaboration, scalability, and flexibility. We empower our teams to build better user interfaces, faster.
 
 #### In Figma
 ```
@@ -293,8 +290,6 @@ By organizing our Figma variables into these four collections, we create a syste
     ├── global.js          // from `Global Primitives` Figma collection
     └── utils.js
 ```
-
-By adopting this structured approach, we not only achieve consistency but also enhance collaboration, scalability, and flexibility. We empower our teams to build better user interfaces, faster.
 
 ---
 
