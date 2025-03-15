@@ -1,5 +1,5 @@
 # Structuring Figma Variables
-Building a scalable UI library in Figma starts with organizing variables thoughtfully. Without structure, managing primitives, semantics, and themes becomes chaotic as projects grow. This guide walks through a clear, implementation-aligned method to structure variables by purpose — from foundational values to reusable design tokens and dynamic content. A practical approach to reducing redundancy, streamlining updates, and maintaining consistency across components and abstractions.
+Building a scalable UI library in Figma starts with organizing variables thoughtfully. Without structure, managing primitives, semantics, and themes becomes chaotic as projects grow. Let's explore a clear, implementation-aligned method to structure variables by purpose — from foundational values to reusable design tokens and dynamic content. A practical approach to reducing redundancy, streamlining updates, and maintaining consistency across components and abstractions.
 
 #### About Variables
 Before diving into structuring, it's essential to understand what variables are and why they matter. In essence, variables in Figma store reusable values that can be applied to all kinds of design properties and prototyping actions. They help save time and effort when building designs, managing design systems, and creating complex prototyping flows.
@@ -37,7 +37,6 @@ The proposed framework categorizes variables into four collections, each serving
           ▼                     ▼                     ▼                     ▼          
 ┌───────────────────┐ ┌───────────────────┐ ┌───────────────────┐ ┌───────────────────┐
 │   Design Tokens   │ │ Global Primitives │ │     Language      │ │Private Primitives │
-│    (Published)    │ │    (Published)    │ │    (Published)    │ │      (Hidden)     │
 └───────────────────┘ └───────────────────┘ └───────────────────┘ └───────────────────┘                                        
 ```
 
@@ -51,7 +50,7 @@ The proposed framework categorizes variables into four collections, each serving
 Let's take a closer look at each collection and see how the groups inside them provide precision and flexibility
 
 #### 01. Design Tokens
-These provide a meaningful context for how a design primitive should be used. For example, you may have a design token called “color-background-warning” to convey a sense of urgency or potential danger. 
+These provide a meaningful context for how a design primitive should be used. For example, you may have a design token called `background-color-warning` to convey a sense of urgency or potential danger. 
 
 Define colors, spacing, shadows, and sizing for components. Groups enforce consistent styling.
 
@@ -89,7 +88,7 @@ Define colors, spacing, shadows, and sizing for components. Groups enforce consi
                                 └────────────┘
 ```
 
-In the codebase, `design-tokens.js` might look something like this (rough example):
+In the codebase, `design-tokens.js` might look something like this:
 
 ```js
 export const designTokens = {
@@ -251,7 +250,6 @@ By organizing Figma variables into these four collections, we create a system th
 │   │   ├── Background
 │   │   ├── Base
 │   │   ├── Border
-│   │   ├── Content
 │   │   └── ...
 │   ├── Shadow
 │   ├── Sizing
@@ -260,7 +258,7 @@ By organizing Figma variables into these four collections, we create a system th
 ├── Global Primitives
 │   ├── Colors
 │   │   ├── Default theme/
-│   │   ├── High contrast/
+│   │   ├── High contrast theme/
 │   │   └── ...
 │   └── Typography
 │       ├── Font family
@@ -268,17 +266,20 @@ By organizing Figma variables into these four collections, we create a system th
 │       ├── Font weight
 │       └── Line height
 ├── Language
-│   ├── Global Areas
+│   ├── Global areas
 │   │   ├── Header
 │   │   ├── Sidebar
 │   │   ├── Footer
 │   │   └── ...
 │   ├── Patterns
+│   ├── Abstractions
 │   └── ...
 └── Private Primitives/
 ```
 
 #### In Code
+In the codebase, theme definitions structure might look something like this:
+
 ```
 .
 └── themes
