@@ -45,7 +45,7 @@ The proposed framework categorizes variables into four collections, each serving
 01 | **Design Tokens** | `Published` | `In sync`  | Context for the intended use of a design primitive.
 02 | **Global Primitives** | `Published` | `In sync` | Basic building blocks of the design.
 03 | **Language** | `Published` | `Optional` | Text strings for adapting to different languages.
-04 | **Private Primitives** | `Hidden` | `Not applicable` | Raw values intended for internal use.
+04 | **Private Primitives** | `Hidden` | `N/A` | Raw values intended for internal use.
 
 Let's take a closer look at each collection and see how the groups inside them provide precision and flexibility
 
@@ -278,8 +278,6 @@ By organizing Figma variables into these four collections, we create a system th
 ```
 
 #### In Code
-In the codebase, theme definitions structure might look something like this:
-
 ```
 .
 └── themes
