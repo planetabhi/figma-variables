@@ -57,7 +57,7 @@ We'll organize Figma variables into four collections, each serving distinct purp
 04 | **Private Primitives** | `Hidden` | `N/A` | Raw values intended for internal use.
 
 #### Rationale
-To tackle the complexities of scaling design system UI library, we developed this collection structure through enterprise project iterations. It balances flexibility and governance, addressing key challenges:
+To tackle the complexities of scaling design system UI libraries, we developed this collection structure through enterprise project iterations. It balances flexibility and governance, addressing key challenges:
 - **Abstraction Clarity**: Separating raw values from semantic tokens aligns design with development. This prevents mixing hex codes with contextual tokens, avoiding style inconsistencies.
 - **Scaling Consistency**: Private Primitives enforce mathematical scales, ensuring uniform spacing. Designers use scaled values, not manual padding, for consistent UI ratios.
 - **Localization Efficiency**: A dedicated Language collection decouples text from components, enabling global language switches.
@@ -69,7 +69,7 @@ The approach provides structure to prevent chaos while maintaining the flexibili
 
 Let's take a closer look at each collection and see how the groups inside them provide precision and flexibility.
 
-#### 01. Collection: Design Tokens
+#### Collection 01: Design Tokens
 Design Tokens provide a meaningful context for how a design primitive should be used. For example, you may have a design token called `--background-warning` to convey a sense of urgency or potential danger. 
 
 Define colors, spacing, shadows, and sizing for components. Groups enforce consistent styling.
@@ -126,7 +126,7 @@ export const designTokens = {
 };
 ```
 
-#### 02. Collection: Global Primitives
+#### Collection 02: Global Primitives
 Global Primitives are your design system’s basic building blocks, like colors, spacing, and sizing. They form the foundations of your design but aren’t used directly in components or layouts.
 
 Store base values: colors (grey-90, red-50), font sizes, and weights. Organize them into themes (Default, High Contrast) for quick swaps.
@@ -198,7 +198,7 @@ export const globalPrimitives = {
 };
 ```
 
-#### 03. Collection: Language
+#### Collection 03: Language
 Holds text strings for global areas, components, patterns, and abstractions. Centralizes translations for design usage.
 
 - Collection visibility (Figma): `Published`
@@ -223,7 +223,7 @@ Holds text strings for global areas, components, patterns, and abstractions. Cen
                                      └────────────────┘
 ```
 
-#### 04. Private Primitives
+#### Collection 04. Private Primitives
 Private primitives contain agnostic values (numbers, scales, black/white) used by global primitives and design token variable collections. These build spacing scales, and colors for other collections, keeping math consistent and reusable.
 
 - Collection visibility (Figma): `Hidden`
@@ -312,7 +312,7 @@ But journey doesn't end here. We need to ensure our Figma variables stay in sync
     └── utils.js
 ```
 
-By adopting this structured approach, we not only achieve consistency but also enhance collaboration, scalability, and flexibility. We empower our teams to build better user interfaces, faster.
+By adopting this battle-tested, structured approach, we not only achieve consistency but also enhance collaboration, scalability, and flexibility. We empower our teams to build better and faster.
 
 ---
 
