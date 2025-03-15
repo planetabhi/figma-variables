@@ -13,7 +13,7 @@ Type | Defined by | &nbsp;
 :--- |:--- |:---
 `Color` | Solid fills | Solid values like #000000. Used for theming and organizing palette.
 `Number` | Number values | Hold values like 16. Used for responsive, language, and text styles.
-`String` | Text strings | Use text (like 'Hello') for language, text styles, and prototype variants.
+`String` | Text strings | Use text (like 'Namaste') for language, text styles, and prototype variants.
 `Boolean` | True, false values | Boolean variables use true/false. Used to show/hide layers.
 
 #### Collections and Groups
