@@ -32,9 +32,9 @@ To keep your variables organized, Figma provides collections and groups.
 ---
 
 ## Methodology
-We'll organize Figma variables into four collections, each serving distinct purposes.
+> Structuring collections by abstraction.
 
-> Structuring Collections by Abstraction
+We'll organize Figma variables into four collections, each serving distinct purposes.
 
 ```
 ┌───────────────┐                                                             
@@ -55,6 +55,17 @@ We'll organize Figma variables into four collections, each serving distinct purp
 02 | **Global Primitives** | `Published` | `In sync` | Basic building blocks of the design.
 03 | **Language** | `Published` | `Optional` | Text strings for adapting to different languages.
 04 | **Private Primitives** | `Hidden` | `N/A` | Raw values intended for internal use.
+
+#### Rationale
+To tackle the complexities of scaling design system UI library, we developed this collection structure through enterprise project iterations. It balances flexibility and governance, addressing key challenges:
+- **Abstraction Clarity**: Separating raw values from semantic tokens aligns design with development. This prevents mixing hex codes with contextual tokens, avoiding style inconsistencies.
+- **Scaling Consistency**: Private Primitives enforce mathematical scales, ensuring uniform spacing. Designers use scaled values, not manual padding, for consistent UI ratios.
+- **Localization Efficiency**: A dedicated Language collection decouples text from components, enabling global language switches.
+- **Code as Source**: "Design Tokens" and "Global Primitives" generate raw, tech-agnostic SSOT. Figma structures directly mirror codebase themes, streamlining design-to-dev handoff.
+
+The approach provides structure to prevent chaos while maintaining the flexibility needed for complex product ecosystems.
+
+---
 
 Let's take a closer look at each collection and see how the groups inside them provide precision and flexibility.
 
