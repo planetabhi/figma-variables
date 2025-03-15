@@ -15,8 +15,11 @@
     "figma",
     "variables",
     "structuring",
-    "code",
-    "connect"
+    "groups",
+    "collections",
+    "collection",
+    "methodology",
+    "method"
   ],
   "devDependencies": {
     "cheerio": "^1.0.0",
