@@ -1,5 +1,5 @@
-# Structuring Figma Variables by Purpose
-Building a scalable UI library in Figma starts with organizing variables thoughtfully. Without structure, managing primitives, semantics, and themes becomes chaotic as projects grow. This guide walks through a clear, codebase-aligned approach to structure variables by purpose — from foundational values to reusable design tokens and dynamic content. You'll learn how to reduce redundancy, streamline updates, and ensure consistency across components and abstractions. Let's simplify the complexity.
+# Structuring Figma Variables
+Building a scalable UI library in Figma starts with organizing variables thoughtfully. Without structure, managing primitives, semantics, and themes becomes chaotic as projects grow. This guide walks through a clear, implementation-aligned method to structure variables by purpose — from foundational values to reusable design tokens and dynamic content. A practical approach to reducing redundancy, streamlining updates, and maintaining consistency across components and abstractions.
 
 #### About Variables
 Before diving into structuring, it's essential to understand what variables are and why they matter. In essence, variables in Figma store reusable values that can be applied to all kinds of design properties and prototyping actions. They help save time and effort when building designs, managing design systems, and creating complex prototyping flows.
@@ -25,8 +25,8 @@ To keep your variables organized, Figma provides collections and groups.
 
 ---
 
-## Structuring Collections
-Now, let's get to structuring your collections. We'll use four main collections, each with a specific purpose.
+## Methodology: The Four-Collection Framework
+The proposed framework categorizes variables into four collections, each serving distinct purposes 
 
 ```
 ┌───────────────────┐                                                                  
@@ -43,17 +43,19 @@ Now, let's get to structuring your collections. We'll use four main collections,
 
 &nbsp; | Collection Name | Collection Visibility | Code Definition | &nbsp;
 :--- |:--- |:--- |:--- |:---
-01 | **Design Tokens** | `Published` | `In sync`  | These provide a meaningful context for how a design primitive should be used. For example, you may have a design token called “color-background-warning” to convey a sense of urgency or potential danger.
-02 | **Global Primitives** | `Published` | `In sync` | These are your design system’s basic building blocks, like colors, spacing, and sizing. They form the foundations of your design but aren’t used directly in components or layouts.
-03 | **Language** | `Published` | `Optional` | 
-04 | **Private Primitives** | `Hidden` | `Not applicable` | 
+01 | **Design Tokens** | `Published` | `In sync`  | 
+02 | **Global Primitives** | `Published` | `In sync` | 
+03 | **Language** | `Published` | `Optional` | Text strings for localization.
+04 | **Private Primitives** | `Hidden` | `Not applicable` | Raw values
 
 > Note: 'Design Tokens' and 'Global Primitives' collections can be kept in sync with your codebase's theme definitions, which will be the single source of truth (SSOT).
 
 ## Structuring Within Collections: Groups
 Now, let’s deep dive into how groups within each collection drive precision and flexibility.
 
-#### 01. Design Tokens Collection
+#### 01. `Design Tokens` Collection
+These provide a meaningful context for how a design primitive should be used. For example, you may have a design token called “color-background-warning” to convey a sense of urgency or potential danger. 
+
 Define colors, spacing, shadows, and sizing for components. Groups enforce consistent styling.
 
 - Collection visibility (Figma): `Published`
@@ -108,7 +110,9 @@ export const designTokens = {
 };
 ```
 
-#### 02. Global Primitives Collection
+#### 02. `Global Primitives` Collection
+These are your design system’s basic building blocks, like colors, spacing, and sizing. They form the foundations of your design but aren’t used directly in components or layouts.
+
 Store base values: colors (grey-90, red-50), font sizes, and weights. Organize them into themes (Default, High Contrast) for quick swaps.
 
 - Collection visibility (Figma): `Published`
@@ -178,7 +182,7 @@ export const globalPrimitives = {
 };
 ```
 
-#### 03. Language Collection
+#### 03. `Language` Collection
 Holds text strings for gloabl areas, components, patterns, and abstractions. Centralizes translations for design usage.
 
 - Collection visibility (Figma): `Published`
@@ -203,7 +207,7 @@ Holds text strings for gloabl areas, components, patterns, and abstractions. Cen
                                      └────────────────┘
 ```
 
-#### 04. Private Primitives Collection
+#### 04. `Private Primitives` Collection
 Private primitives contain agnostic values (numbers, scales, black/white) used by global primitives and design token variable collections. These build spacing scales, and colors for other collections, keeping math consistent and reusable.
 
 - Collection visibility (Figma): `Hidden`
