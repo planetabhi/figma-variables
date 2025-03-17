@@ -56,7 +56,7 @@ Together, we can organize Figma variables into four collections, each serving a 
 03 | **Language** | `Published` | `Optional` | Text strings for adapting to different languages.
 04 | **Private Primitives** | `Hidden` | `N/A` | Raw values intended for internal use.
 
-#### The Reasoning Behind This Approach
+#### The Rationale
 Through many iterations with enterprise projects, we've developed this collection structure to balance flexibility with governance. It addresses several key challenges we all face when scaling design systems:
 - **Clarity in Abstraction**: Separating raw values from semantic tokens aligns design with development. This prevents mixing hex codes with contextual tokens, helping everyone avoid style inconsistencies.
 - **Consistency at Scale**: Private primitives help enforce mathematical scales, ensuring uniform spacing throughout interfaces. Designers can use these scaled values rather than manual padding, creating consistent UI element ratios.
@@ -307,8 +307,8 @@ Our journey doesn't end with organization alone. Let's also make sure our Figma 
     │   ├── dark
     │   ├── light
     │   └── tests
-    ├── design-tokens.js   // from `Design Tokens` Figma collection
-    ├── global.js          // from `Global Primitives` Figma collection
+    ├── design-tokens.js   // generated from `Design Tokens` Figma collection
+    ├── global.js          // generated from `Global Primitives` Figma collection
     └── utils.js
 ```
 
